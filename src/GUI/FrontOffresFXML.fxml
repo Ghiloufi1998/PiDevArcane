@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.FrontOffresFXMLController">
+   <children>
+      <Text layoutX="476.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes Offres &amp; Points">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Text>
+      <Text fx:id="pts" layoutX="996.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes Points :  ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table" layoutX="340.0" layoutY="159.0" prefHeight="466.0" prefWidth="848.0">
+        <columns>
+          <TableColumn fx:id="desc" prefWidth="205.0" text="Description d'Offre" />
+            <TableColumn fx:id="dest" minWidth="0.0" prefWidth="186.0" text="Destination" />
+            <TableColumn fx:id="pourc" prefWidth="272.0" text="Pourcentage_red" />
+          <TableColumn fx:id="ptsreq" minWidth="0.0" prefWidth="184.0" text="Points requis pour s'inscrire" />
+        </columns>
+      </TableView>
+      <Button layoutX="1030.0" layoutY="646.0" mnemonicParsing="false" onAction="#select" prefHeight="54.0" prefWidth="158.0" text="Sélectionner Offre">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
