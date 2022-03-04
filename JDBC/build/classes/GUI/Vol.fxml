@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="513.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.VolController">
+   <children>
+      <TextField fx:id="dp" layoutX="33.0" layoutY="181.0" text="Départ" />
+      <TextField fx:id="ds" layoutX="33.0" layoutY="109.0" promptText="Destinations" />
+      <TableView fx:id="table" layoutX="392.0" layoutY="109.0" prefHeight="329.0" prefWidth="403.0">
+        <columns>
+          <TableColumn fx:id="cvid" prefWidth="75.0" text="Vol_id" />
+          <TableColumn fx:id="cd" prefWidth="121.0" text="Destination" />
+            <TableColumn fx:id="cdp" prefWidth="93.0" text="Départ" />
+        </columns>
+      </TableView>
+      <Button fx:id="Ajouter" layoutX="24.0" layoutY="296.0" mnemonicParsing="false" onAction="#Ajouter" text="Ajouter" />
+      <Button fx:id="Modifier" layoutX="127.0" layoutY="296.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Button fx:id="Supprimer" layoutX="246.0" layoutY="296.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
+      <TextField fx:id="search" layoutX="466.0" layoutY="14.0" onAction="#ShowTable" onKeyReleased="#sort" />
+   </children>
+</AnchorPane>

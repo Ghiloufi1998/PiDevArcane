@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="731.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.Stats2Controller">
+   <children>
+      <AnchorPane layoutX="307.0" layoutY="39.0" prefHeight="334.0" prefWidth="441.0">
+         <children>
+            <PieChart fx:id="avg" layoutX="33.0" layoutY="12.0" prefHeight="302.0" prefWidth="393.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="af" layoutX="499.0" layoutY="404.0" mnemonicParsing="false" onAction="#afficher" text="Afficher" />
+      <TextField fx:id="Pm" layoutX="25.0" layoutY="24.0" promptText="Avg prix" text="Prix Moyen" />
+      <TableView fx:id="chpv" layoutX="19.0" layoutY="75.0" prefHeight="168.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="chv" prefWidth="109.0" text="Description" />
+            <TableColumn fx:id="prixc" prefWidth="90.0" text="Prix" />
+        </columns>
+      </TableView>
+      <Text layoutX="230.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voyages à bas coûts" wrappingWidth="85.32373046875" />
+      <TableView fx:id="expv" layoutX="19.0" layoutY="264.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="exp" prefWidth="107.0" text="Description" />
+            <TableColumn fx:id="prixv" prefWidth="90.0" text="Prix" />
+        </columns>
+      </TableView>
+      <Text layoutX="236.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix Moyen" wrappingWidth="96.32373046875" />
+      <Text layoutX="230.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voyages coûteux" wrappingWidth="85.32373046875" />
+   </children>
+</AnchorPane>
