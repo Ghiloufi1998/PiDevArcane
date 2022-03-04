@@ -10,19 +10,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 /**
  *
- * @author Ghiloufi
+ * @author Skander
  */
 public class MyDB {
-     
-    private String url ="jdbc:mysql://localhost/pidev_arcane"; // :3306 (port mysql)
-    private String user ="root";
-    private String pass ="";
-    private Connection connection;
+    
+    public String url ="jdbc:mysql://localhost/Arcane"; // :3306 (port mysql)
+    public String user ="root";
+    public String pass ="";
+    public Connection connection;
     static MyDB instance;
     
-    private MyDB(){
+    public MyDB(){
         try {
             connection = DriverManager.getConnection(url, user, pass);
             System.out.println("connexion établie");
@@ -41,4 +42,5 @@ public class MyDB {
     public Connection getConnection() {
         return connection;
     }
+    
 }
