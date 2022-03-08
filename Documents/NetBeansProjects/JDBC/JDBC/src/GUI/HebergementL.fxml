@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="328.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.HebergementLController">
+   <children>
+      <ImageView fx:id="imagelab" fitHeight="139.0" fitWidth="180.0" layoutX="53.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="description" layoutX="39.0" layoutY="191.0" prefHeight="28.0" prefWidth="77.0" text="Description" />
+      <Label fx:id="disponibilite" layoutX="39.0" layoutY="225.0" prefHeight="17.0" prefWidth="101.0" text="Disponibilite" />
+      <Label fx:id="prix" layoutX="39.0" layoutY="252.0" prefHeight="17.0" prefWidth="88.0" text="Prix" />
+      <Label fx:id="type" layoutX="40.0" layoutY="278.0" prefHeight="17.0" prefWidth="88.0" text="Type" />
+      <Label fx:id="image" layoutX="44.0" layoutY="174.0" prefHeight="17.0" prefWidth="42.0" text="image" />
+   </children>
+</AnchorPane>
