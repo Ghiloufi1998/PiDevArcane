@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.HébergementController">
+   <children>
+      <Label layoutX="214.0" layoutY="24.0" prefHeight="21.0" prefWidth="145.0" text="Choisir Hébergement" />
+      <Button fx:id="btn" layoutX="245.0" layoutY="338.0" mnemonicParsing="false" onAction="#sui" text="Button" />
+      <TableView fx:id="Voyages" layoutX="178.0" layoutY="67.0" prefHeight="266.0" prefWidth="264.0">
+         <columns>
+            <TableColumn fx:id="adresse" prefWidth="150.0" text="Adresse" />
+            <TableColumn fx:id="prix" prefWidth="114.0" text="Prix" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
