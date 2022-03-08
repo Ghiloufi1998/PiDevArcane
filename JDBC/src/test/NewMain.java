@@ -42,9 +42,14 @@ public class NewMain {
        //sv.supprimer(9);
         //sv.ajout(vo1);
         //vv.ajout(v1);
-        //System.out.println(sv.afficher());     
+        
+        System.out.println(""+vv.getx(3));
+        System.out.println(""+vv.gety(3));
+               
+                
+        //System.outs.println(sv.afficher());     
         //System.out.println(sv.GetAllTitle());;
-        System.out.println(sv.nbrv(v));
+        //System.out.println(sv.nbrv(v));
         //System.out.println(vv.nbrv(1));;
        // System.out.println((sv.consulterstat()).get(0));
         //System.out.println(sv.get("zz"));

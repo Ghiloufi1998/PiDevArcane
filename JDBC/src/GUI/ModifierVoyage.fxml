@@ -12,7 +12,7 @@
    <children>
       <TableView fx:id="Voyages" layoutX="25.0" layoutY="75.0" prefHeight="271.0" prefWidth="723.0">
         <columns>
-          <TableColumn fx:id="Voyage_id" prefWidth="89.0" text="Voyage_id" />
+          <TableColumn fx:id="Voyage_id" prefWidth="89.0" text="Voyages " />
           <TableColumn fx:id="Description" prefWidth="98.0" text="Description " />
             <TableColumn fx:id="Prix" prefWidth="56.0" text="Prix" />
             <TableColumn fx:id="Vol_id" prefWidth="61.0" text="Vol_id" />
@@ -30,5 +30,6 @@
       <ComboBox fx:id="cb" layoutX="571.0" layoutY="29.0" prefHeight="31.0" prefWidth="89.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="477.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transport" wrappingWidth="77.00001043081284" />
+      <Button layoutX="404.0" layoutY="373.0" mnemonicParsing="false" onAction="#map" text="Button" />
    </children>
 </AnchorPane>

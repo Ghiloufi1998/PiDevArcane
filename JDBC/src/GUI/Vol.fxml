@@ -5,21 +5,35 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="513.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.VolController">
    <children>
-      <TextField fx:id="dp" layoutX="33.0" layoutY="181.0" text="Départ" />
-      <TextField fx:id="ds" layoutX="33.0" layoutY="109.0" promptText="Destinations" />
-      <TableView fx:id="table" layoutX="392.0" layoutY="109.0" prefHeight="329.0" prefWidth="403.0">
+      <TextField fx:id="dp" layoutX="173.0" layoutY="152.0" promptText="Départ" />
+      <TextField fx:id="ds" layoutX="173.0" layoutY="87.0" promptText="Destination" />
+      <TableView fx:id="table" layoutX="383.0" layoutY="78.0" prefHeight="316.0" prefWidth="403.0">
         <columns>
-          <TableColumn fx:id="cvid" prefWidth="75.0" text="Vol_id" />
-          <TableColumn fx:id="cd" prefWidth="121.0" text="Destination" />
-            <TableColumn fx:id="cdp" prefWidth="93.0" text="Départ" />
+          <TableColumn fx:id="cvid" prefWidth="92.0" text="Num_Vol" />
+          <TableColumn fx:id="cd" prefWidth="171.0" text="Destination" />
+            <TableColumn fx:id="cdp" prefWidth="99.0" text="Départ" />
         </columns>
       </TableView>
-      <Button fx:id="Ajouter" layoutX="24.0" layoutY="296.0" mnemonicParsing="false" onAction="#Ajouter" text="Ajouter" />
-      <Button fx:id="Modifier" layoutX="127.0" layoutY="296.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
-      <Button fx:id="Supprimer" layoutX="246.0" layoutY="296.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
-      <TextField fx:id="search" layoutX="466.0" layoutY="14.0" onAction="#ShowTable" onKeyReleased="#sort" />
+      <Button fx:id="Ajouter" layoutX="23.0" layoutY="241.0" mnemonicParsing="false" onAction="#Ajouter" style="-fx-background-color: DODGERBLUE;" text="Ajouter" />
+      <Button fx:id="Modifier" layoutX="126.0" layoutY="241.0" mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: DODGERBLUE;" text="Modifier" />
+      <Button fx:id="Supprimer" layoutX="245.0" layoutY="241.0" mnemonicParsing="false" onAction="#Supprimer" style="-fx-background-color: DODGERBLUE;" text="Supprimer" />
+      <TextField fx:id="search" layoutX="383.0" layoutY="22.0" onAction="#ShowTable" onKeyReleased="#sort" />
+      <Pane layoutY="414.0" prefHeight="99.0" prefWidth="818.0" style="-fx-background-color: DODGERBLUE;" />
+      <Text layoutX="36.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination" wrappingWidth="89.00000405311584">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="36.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Départ" wrappingWidth="89.00000405311584">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

@@ -5,6 +5,7 @@
  */
 package test;
 
+import GUI.MapsController;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import static jdk.nashorn.internal.objects.NativeArray.map;
 
 /**
  *
@@ -27,7 +29,10 @@ public class NewFXMain extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../GUI/AjouterVoyage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../GUI/Maps.fxml"));
+            //final MapsController example = new MapsController("test");
+		//example.generateMarker(map.getCenter());
+            //Parent root = FXMLLoader.load(getClass().getResource("../GUI/AjouterVoyage.fxml"));
            // Parent root = FXMLLoader.load(getClass().getResource("../GUI/ModifierVoyage.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);

@@ -41,6 +41,7 @@ import services.ServiceVoyageorganise;
 import tray.animations.AnimationType;
 import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
+import utils.NavigationEntreInterfaces;
 //import tray.
 
 /**
@@ -113,16 +114,21 @@ public class AjouterVoyageController implements Initializable {
 //       String s=cv.getSelectionModel().getSelectedItem().toString();
 //        String s1=t.getSelectionModel().getSelectedItem().toString();
 //        System.out.println(s1+""+s);
+            String exp1 = cv.getValue().toString();
+         // t.getValue().isEmpty()
         //if (!Descriptions.getText().equals("") && !Prix.getText().equals("") && !Nbre_Places.getText().equals("") && !Vol.getText().equals("") && !Transport.getText().equals("") ){
         //if (!Descriptions.getText().equals("") && !Prix.getText().equals("") && !Nbre_Places.getText().equals("") && !cv.getValue().equals("") && !t.getValue().equals("") ){
         //if (!Descriptions.getText().equals("") && !Prix.getText().equals("") && !Nbre_Places.getText().equals("") && !( (cv.getItems()).isEmpty() ) && !( (t.getItems()).isEmpty()) ){
         //if (!Descriptions.getText().equals("") && !Prix.getText().equals("") && !Nbre_Places.getText().equals("") && !s.equals("") && !s1.equals("") ){
-        if (!Descriptions.getText().equals("") && !Prix.getText().equals("") && !Nbre_Places.getText().equals("")  ){
+        if (!Descriptions.getText().equals("") && !Prix.getText().equals("") && !Nbre_Places.getText().equals("") &&  (  (Double.parseDouble(Prix.getText())>0 ) )  && (!t.getValue().isEmpty()) && (exp1.isEmpty())  ){
 
         Voyageorganise vo = new Voyageorganise();
         vo.setDescription(Descriptions.getText());
-        int x = Integer.parseInt(Prix.getText());
+        //int x = Integer.parseInt(Prix.getText());
+        Double exp= Double.parseDouble(Prix.getText());
+        int x = (int)Math.round(exp);
         vo.setPrix(x);
+        //vo.setPrix(x);
         int y = Integer.parseInt(Nbre_Places.getText());
         vo.setNbre_Places(y);
         //int z = Integer.parseInt(Vol.getText());
@@ -179,6 +185,13 @@ public class AjouterVoyageController implements Initializable {
         } catch (IOException ex) { 
             Logger.getLogger(StatsController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+    }
+
+    @FXML
+    private void Retour(ActionEvent event) throws IOException  {
+       NavigationEntreInterfaces nav = new NavigationEntreInterfaces();
+      nav.navigate(event, "Gestion", "/gui/Gest.fxml");
         
     }
 }

@@ -30,6 +30,7 @@ import tray.animations.AnimationType;
 import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
 
+
 /**
  * FXML Controller class
  *
@@ -99,7 +100,7 @@ public class ModifierVoyageController implements Initializable {
     public void ShowTable() {
         ObservableList<Voyageorganise> list = getTableList();
         Voyages.setItems(list);
-        Voyage_id.setCellValueFactory(new PropertyValueFactory<>("Voyage_id"));
+     //   Voyage_id.setCellValueFactory(new PropertyValueFactory<>("Voyage_id"));
         Description.setCellValueFactory(new PropertyValueFactory<>("Description"));
         //Image.setCellValueFactory(new PropertyValueFactory<>("Image"));
         Prix.setCellValueFactory(new PropertyValueFactory<>("Prix"));
@@ -164,14 +165,17 @@ public class ModifierVoyageController implements Initializable {
     @FXML
     private void Update(ActionEvent event) {
      
-        if (!Descriptionv.getText().equals("") && !Prix.getText().equals("") && !imagev.getText().equals("") && !Vol.getText().equals("")  ){
+        if (!Descriptionv.getText().equals("") && !Prix.getText().equals("") && !imagev.getText().equals("") && !Vol.getText().equals("") && ((Double.parseDouble(prixv.getText())>0 ) )  ){
         
         Voyageorganise vo = Voyages.getSelectionModel().getSelectedItem();
         String desc = Descriptionv.getText();
         String nbreplace = imagev.getText();
         Integer nb = Integer.parseInt(nbreplace);
         String prix  = prixv.getText();
-        Integer prixvv=Integer.parseInt(prix);
+        
+        //Integer prixvv=Integer.parseInt(prix);
+        Double oo=Double.parseDouble(prix);
+        Integer prixvv=(int)Math.round(oo);
         String iheb=Vol.getText();
         Integer iheb1=Integer.parseInt(iheb);
         Vol v1=vv.get(iheb1);
@@ -197,6 +201,21 @@ public class ModifierVoyageController implements Initializable {
         
         
     }
-    }}    
+    }    
+
+    @FXML
+    private void map(ActionEvent event) {
+       Voyageorganise vo = Voyages.getSelectionModel().getSelectedItem();
+
+        Double x =vv.getx(vo.getVol_id());
+        Double y =vv.gety(vo.getVol_id());
+        
+        MapsController.test(x,y);
+        
+        
+    }
+
+   
+}    
   
 

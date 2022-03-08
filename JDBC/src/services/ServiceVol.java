@@ -196,5 +196,34 @@ public class ServiceVol implements IService<Vol> {
         }
         return list;
     }
-     
+     public Double getx(int vol_id) {
+         Double v =0.0;
+        
+        try {
+             String req ="select x from Vol where Vol_id = "+vol_id;
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+        while (rs.next()){    
+         v=rs.getDouble("x");
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(ServicePersonne.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return v;
+    }
+     public Double gety(int vol_id) {
+         Double v =0.0;
+        
+        try {
+             String req ="select y from Vol where Vol_id = "+vol_id;
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+        while (rs.next()){    
+         v=rs.getDouble("y");
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(ServicePersonne.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return v;
+    }
 }

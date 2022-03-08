@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GestController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GestController">
    <children>
-      <Pane prefHeight="600.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" styleClass="w" AnchorPane.leftAnchor="0.0">
+      <Pane prefHeight="1118.0" prefWidth="377.0" style="-fx-background-color: DODGERBLUE;" styleClass="w" AnchorPane.leftAnchor="0.0">
          <children>
-            <Button layoutY="243.0" mnemonicParsing="false" onAction="#Vol" prefHeight="31.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" text="Gérer Vols">
+            <Button layoutX="7.0" layoutY="248.0" mnemonicParsing="false" onAction="#Vol" prefHeight="31.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" text="Gérer Vols">
                <textFill>
                   <LinearGradient endX="1.0" endY="0.058252427184465994" startX="1.0">
                      <stops>
@@ -28,7 +28,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button layoutY="358.0" mnemonicParsing="false" onAction="#Voyages" prefHeight="31.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" text="    Gérer Voyages Organisés">
+            <Button layoutX="7.0" layoutY="392.0" mnemonicParsing="false" onAction="#Voyages" prefHeight="31.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" text="    Gérer Voyages Organisés">
                <textFill>
                   <LinearGradient endX="1.0" endY="0.058252427184465994" startX="1.0">
                      <stops>
@@ -41,7 +41,7 @@
                   <Font name="System Bold" size="21.0" />
                </font>
             </Button>
-            <Button layoutY="466.0" mnemonicParsing="false" onAction="#Stats" prefHeight="31.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" text="Consulter Stats">
+            <Button layoutX="14.0" layoutY="513.0" mnemonicParsing="false" onAction="#Stats" prefHeight="31.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" text="Consulter Stats">
                <textFill>
                   <LinearGradient endX="1.0" endY="0.058252427184465994" startX="1.0">
                      <stops>
@@ -54,7 +54,7 @@
                   <Font name="System Bold" size="21.0" />
                </font>
             </Button>
-            <ImageView fx:id="img" fitHeight="213.0" fitWidth="239.0" layoutX="32.0" layoutY="14.0">
+            <ImageView fx:id="img" fitHeight="213.0" fitWidth="249.0" layoutX="59.0" layoutY="14.0">
                <viewport>
                   <Rectangle2D />
                </viewport>
@@ -64,16 +64,16 @@
             </ImageView>
          </children>
       </Pane>
-      <Text layoutX="389.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espace Gestionnaire " wrappingWidth="464.6708984375">
+      <Text layoutX="538.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espace Gestionnaire " wrappingWidth="490.6708984375">
          <font>
             <Font size="45.0" />
          </font>
       </Text>
-      <ImageView fx:id="im" fitHeight="311.0" fitWidth="308.0" layoutX="425.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="im" fitHeight="563.0" fitWidth="542.0" layoutX="512.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images.png" />
          </image>
       </ImageView>
-      <Button fx:id="qt" layoutX="733.0" layoutY="514.0" mnemonicParsing="false" onAction="#quitter" prefHeight="45.0" prefWidth="106.0" text="Quitter" />
+      <Button fx:id="qt" layoutX="1148.0" layoutY="824.0" mnemonicParsing="false" onAction="#quitter" prefHeight="45.0" prefWidth="106.0" text="Quitter" />
    </children>
 </AnchorPane>
