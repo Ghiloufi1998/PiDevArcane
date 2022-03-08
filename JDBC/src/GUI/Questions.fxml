@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="726.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.QuestionsController">
+   <children>
+      <TextField fx:id="sjt" editable="false" layoutX="337.0" layoutY="126.0" prefHeight="25.0" prefWidth="370.0" />
+      <Label layoutX="468.0" layoutY="97.0" prefHeight="17.0" prefWidth="33.0" text="Sujet" />
+      <TableView fx:id="tablequestion" layoutX="441.0" layoutY="181.0" prefHeight="162.0" prefWidth="594.0">
+        <columns>
+          <TableColumn fx:id="colidq" prefWidth="49.0" text="ID" />
+          <TableColumn fx:id="colquestion" prefWidth="228.0" text="Question" />
+            <TableColumn fx:id="coltype" prefWidth="107.0" text="Type" />
+            <TableColumn fx:id="colidsondg" minWidth="0.0" prefWidth="209.0" text="Id Sondage" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtquestion" layoutX="217.0" layoutY="188.0" onKeyReleased="#testQuest" prefHeight="25.0" prefWidth="189.0" promptText="Insérer un question" />
+      <ChoiceBox fx:id="comb" layoutX="217.0" layoutY="250.0" onDragDetected="#select" prefWidth="150.0" />
+      <Label layoutX="226.0" layoutY="164.0" text="Question" />
+      <Label layoutX="230.0" layoutY="229.0" text="Type" />
+      <Button fx:id="btnAjout" layoutX="162.0" layoutY="307.0" mnemonicParsing="false" onAction="#AjouterQ" prefHeight="25.0" prefWidth="72.0" text="Ajouter" />
+      <Button fx:id="btnModif" layoutX="244.0" layoutY="307.0" mnemonicParsing="false" onAction="#Modif" text="Modifier" />
+      <Button fx:id="btnSupp" layoutX="315.0" layoutY="307.0" mnemonicParsing="false" onAction="#SupprimerQ" text="Supprimer" />
+      <Button fx:id="btnafficher" layoutX="650.0" layoutY="126.0" mnemonicParsing="false" onAction="#AfficherQ" text="Afficher" />
+      <Button fx:id="stat" layoutX="738.0" layoutY="126.0" mnemonicParsing="false" onAction="#showStat" prefHeight="25.0" prefWidth="72.0" text="Statistique" />
+   </children>
+</AnchorPane>

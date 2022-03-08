@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="762.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SondageController">
+   <children>
+      <TableView fx:id="table" editable="true" layoutX="265.0" layoutY="72.0" prefHeight="199.0" prefWidth="559.0">
+         <columns>
+            <TableColumn fx:id="colid" minWidth="0.0" prefWidth="97.0" text="Id" />
+            <TableColumn fx:id="colsujet" minWidth="0.0" prefWidth="128.0" text="Sujet" />
+            <TableColumn fx:id="colcategorie" minWidth="0.0" prefWidth="137.0" text="Catégorie" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnajoutq" layoutX="429.0" layoutY="463.0" mnemonicParsing="false" onAction="#AjouterQuestion" prefHeight="30.0" prefWidth="190.0" text="Gérer questions" />
+      <Button fx:id="btnsupprimer" layoutX="435.0" layoutY="398.0" mnemonicParsing="false" onAction="#SupprimerT" text="Supprimer" />
+      <TextField fx:id="Textcategorie" layoutX="543.0" layoutY="338.0" onKeyReleased="#testCategorie" promptText="Catégorie" />
+      <TextField fx:id="Textsujet" layoutX="370.0" layoutY="338.0" onKeyReleased="#testSujet" promptText="Sujet" />
+      <Button fx:id="btnModifier" layoutX="539.0" layoutY="399.0" mnemonicParsing="false" onAction="#ModifierT" prefHeight="30.0" prefWidth="76.0" text="Modifier" />
+      <Button fx:id="btnAjouter" layoutX="718.0" layoutY="340.0" mnemonicParsing="false" onAction="#AjouterT" prefHeight="30.0" prefWidth="76.0" text="Ajouter" />
+   </children>
+</AnchorPane>
