@@ -203,7 +203,7 @@ public class CoursService implements IService<Cours> {
         
         int x=0;
         try {
-             String req ="select COUNT(*) n from Cours where Upper(titre) = '"+c.getTitre().toUpperCase();
+             String req ="select COUNT(*) n from Cours where Upper(titre) = '"+c.getTitre().toUpperCase()+"'";
             Statement st = cnx.createStatement();
             ResultSet rs = st.executeQuery(req);
         while (rs.next()){    

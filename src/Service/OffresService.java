@@ -130,7 +130,7 @@ public class OffresService implements IService<Offres>{
         
         int x=0;
         try {
-             String req ="select COUNT(*) n from offres where Upper(destination) = '"+c.getDestination().toUpperCase()+"' and Pourcentage_red ="+c.getPourcentage_red()+"' and Nb_point_req ="+c.getNb_points_req();
+             String req ="select COUNT(*) n from offres where Upper(destination) = '"+c.getDestination().toUpperCase()+"' and Pourcentage_red ="+c.getPourcentage_red()+" and Nb_point_req ="+c.getNb_points_req()+"";
             Statement st = cnx.createStatement();
             ResultSet rs = st.executeQuery(req);
         while (rs.next()){    

@@ -28,10 +28,9 @@ import javafx.collections.ObservableList;
 public class Main {
 
     public static void main(String[] args) throws SQLException {
-        //    OffresService so = new OffresService();
+         OffresService so = new OffresService();
         //    Offres o = new Offres("qsdqsdqs", 26, "sqdqsd", 20000);
-        //  Offres oup = new Offres(22, "hellloo im updated", 15, "heloooo", 500);
-        //  so.Create(o);
+        
         //  System.out.println(sp.Read());
      //    VolService vs = new VolService();
     //     System.out.println(vs);
@@ -61,36 +60,41 @@ public class Main {
         //  System.out.println(gs.Read());
         // CoursService cs = new CoursService();
         // Cours c = new Cours("test type", "test contenu", gs.get(75) );
-        //   System.out.println(cs.Read());
-        //cs.Create(c);
-        //System.out.println(gs.get(75)); 
-        // cs.Delete(17);
-        //System.out.println(cs.Read());
-       ExerciceService es = new ExerciceService();
-      ObservableList <Exercices> e = es.GetQuestionByidcrs(86);
-       
-          System.out.println(e.get(1).getReponse());
-     
-//           System.out.println(es.GetAllTitleCours());
-//           CoursService cs = new CoursService();
-//             Exercices e = new Exercices("QCM", "Question test", "Reponse test", cs.get(86));
-//           es.Create(e);
-  //         System.out.println(cs.getBytitre("texte"));
-      
-        //      Exercices e = new Exercices( "QCM", "test question 2 ", "test reponse 2", c, 18);
-        //     Exercices e2 = new Exercices( "QCCCCMMM", "hehehehehe", "dededede", c, 18);
-        //  es.Create(e2);
-        //   es.Create(e);
-        //   System.out.println(es.Read());
-        // es.Delete(11);
-        //  System.out.println(cs.Read());
-        //       CertifService cs = new CertifService();
-        //     try {
-        //        cs.getUserlogged();
-        //     } catch (SQLException ex) {
+//        //   System.out.println(cs.Read());
+//        //cs.Create(c);
+//        //System.out.println(gs.get(75)); 
+//        // cs.Delete(17);
+//        //System.out.println(cs.Read());
+//       ExerciceService es = new ExerciceService();
+//      ObservableList <Exercices> e = es.GetQuestionByidcrs(86);
+//       
+//          System.out.println(e.get(1).getReponse());
+//          
+//     
+////           System.out.println(es.GetAllTitleCours());
+////           CoursService cs = new CoursService();
+////             Exercices e = new Exercices("QCM", "Question test", "Reponse test", cs.get(86));
+////           es.Create(e);
+//  //         System.out.println(cs.getBytitre("texte"));
+//      
+//        //      Exercices e = new Exercices( "QCM", "test question 2 ", "test reponse 2", c, 18);
+//        //     Exercices e2 = new Exercices( "QCCCCMMM", "hehehehehe", "dededede", c, 18);
+//        //  es.Create(e2);
+//        //   es.Create(e);
+//        //   System.out.println(es.Read());
+//        // es.Delete(11);
+//        //  System.out.println(cs.Read());
+//        //       CertifService cs = new CertifService();
+//        //     try {
+//        //        cs.getUserlogged();
+//        //     } catch (SQLException ex) {
         //          Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         //      }
         //cs.CertifPDF();
+        
+          Offres oup = new Offres(22, "hellloo im updated", 15, "heloooo", 500);
+          //so.Create(oup);
+        System.out.println(so.nbrv(oup));
     }
     
 }

@@ -169,7 +169,7 @@ Connection cnx;
         
         int x=0;
         try {
-             String req ="select COUNT(*) n from exercices where Upper(question) = '"+c.getQuestion().toUpperCase();
+             String req ="select COUNT(*) n from exercices where Upper(question) = '"+c.getQuestion().toUpperCase()+"'";
             Statement st = cnx.createStatement();
             ResultSet rs = st.executeQuery(req);
         while (rs.next()){    

@@ -97,18 +97,19 @@ public class CertifService {
       // Creating an ImageData object       
     Image img = Image.getInstance("C:\\Users\\Ghiloufi\\Desktop\\logo try 1-01.png");
       // Adding image to the document     
-      img.setAbsolutePosition(400f, 400f);
+      img.setAbsolutePosition(0f, 0f);
 img.scaleToFit(200f, 200f);
                 // Adding image to the document       
                 doc.add(img);
                 doc.addTitle("Certification De Réussite De"+ getUserlogged().getFname());
+                
                 doc.add(new Paragraph("              Merci pour votre participation au notre formation                  "));
                
           //      doc.add(new Image("C:\\Users\\Ghiloufi\\Desktop\\logo try 1-01.png"));
                 doc.add(new Paragraph());
-                doc.add(new Paragraph("Email: "+ getUserlogged().getEmail()));
-                doc.add(new Paragraph("Bravo vous avez completer votre Formation de communication"));
-                doc.add(new Paragraph("Votre Score est : " + score ));
+                doc.add(new Paragraph("                     Email: "+ getUserlogged().getEmail()));
+                doc.add(new Paragraph("                                Bravo vous avez completer votre Formation de communication"));
+                doc.add(new Paragraph("                             Votre Score est : " + score ));
               
 //closes the document
                 doc.close();

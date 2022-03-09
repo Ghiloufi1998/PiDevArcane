@@ -60,7 +60,9 @@ public class ExercicesTakeFXMLController implements Initializable {
         ObservableList<String> list = FXCollections.observableArrayList("Oui", "Non");
         ans1.setItems(list);
         ans2.setItems(list);
-        btn2.setDisable(true);
+        
+        
+       
         
         // TODO
     }    
@@ -92,31 +94,22 @@ public class ExercicesTakeFXMLController implements Initializable {
        if (ans1.getValue().equals(e.get(0).getReponse()) && (ans2.getValue().equals(e.get(1).getReponse()))){
               score = 200;   
               btn2.setDisable(false);
-                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
                     alert2.setTitle("Félicitations ");
                     alert2.setContentText("Veuillez vérifier vos Réponses , Votre Score est "+String.valueOf(score));
                     alert2.setHeaderText(null);
                     alert2.show();
           
           }
-          else if (ans1.getValue().equals(e.get(0).getReponse()) && !(ans2.getValue().equals(e.get(1).getReponse()))){
+          else if (ans1.getValue().equals(e.get(0).getReponse()) || (ans2.getValue().equals(e.get(1).getReponse()))){
               score = 100; 
               btn2.setDisable(false);
-                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
                     alert2.setTitle("Félicitations ");
                     alert2.setContentText("Votre Score est "+String.valueOf(score));
                     alert2.setHeaderText(null);
                     alert2.show();
           
-      }else if (!(ans1.getValue().equals(e.get(0).getReponse()) && (ans2.getValue().equals(e.get(1).getReponse())))){
-        
-              score = 100; 
-           btn2.setDisable(false);
-                Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert2.setTitle("Félicitations ");
-                    alert2.setContentText(" Votre Score est "+String.valueOf(score));
-                    alert2.setHeaderText(null);
-                    alert2.show();     
       }
           else 
           {

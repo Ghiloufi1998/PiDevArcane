@@ -196,7 +196,7 @@ public ObservableList<Guide>  getByPays(String Pays) throws SQLException{
         
         int x=0;
         try {
-             String req ="select COUNT(*) n from guide where Upper(titre) = '"+c.getTitre().toUpperCase();
+             String req ="select COUNT(*) n from guide where Upper(titre) = '"+c.getTitre().toUpperCase()+"'";
             Statement st = cnx.createStatement();
             ResultSet rs = st.executeQuery(req);
         while (rs.next()){    
