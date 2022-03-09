@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="javaFxGui.LoginController">
+   <children>
+      <TextField fx:id="ai" layoutX="226.0" layoutY="119.0" promptText="\@gmail.com" />
+      <Button fx:id="sc" layoutX="275.0" layoutY="288.0" mnemonicParsing="false" onAction="#click" text="Se connecter" />
+      <Label layoutX="134.0" layoutY="123.0" prefHeight="17.0" prefWidth="50.0" text="E-mail :" />
+      <Label layoutX="123.0" layoutY="192.0" text="Mot de passe :" />
+      <PasswordField fx:id="mp" layoutX="226.0" layoutY="188.0" />
+   </children>
+</AnchorPane>
