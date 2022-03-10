@@ -14,11 +14,14 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 /**
@@ -39,10 +42,13 @@ public class FrontOffresFXMLController implements Initializable {
     @FXML
     private TableColumn<Offres, String> pourc;
     @FXML
-    private TableColumn<Offres, String> ptsreq;
+    private TableColumn<Offres, Integer> ptsreq;
     OffresService os = new OffresService(); 
     UserService us = new UserService() ; 
     private int CurrUserpoints;
+    private int index = -1 ; 
+    @FXML
+    private Button btn1;
     
     
 
@@ -51,6 +57,7 @@ public class FrontOffresFXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         ShowTable(); 
         setPts();
         
@@ -77,5 +84,39 @@ public class FrontOffresFXMLController implements Initializable {
         }
             pts.setText("Mes Points : "+ CurrUserpoints);
         }
+
+    @FXML
+    private void select(ActionEvent event) {
+         index = table.getSelectionModel().getSelectedIndex();
+        if (index <= -1) {
+            return;
+        }
+        
+        Offres f = table.getSelectionModel().getSelectedItem();
+        try {
+            us.UpdateUserOffre(f.getID(), us.getUserlogged().getId());
+            os.UpdatePriceFact(us.getUserlogged().getId(),f.getDestination());
+        } catch (SQLException ex) {
+            Logger.getLogger(FrontOffresFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+    }
+
+    @FXML
+    private void getSelected(MouseEvent event) {
+       
+        index = table.getSelectionModel().getSelectedIndex();
+        if (index <= -1) {
+            return;
+        } System.out.println(CurrUserpoints);
+        System.out.println(ptsreq.getCellData(index));
+        
+        if((ptsreq.getCellData(index)) > CurrUserpoints ){
+            btn1.setDisable(true);
+            
+        }
+    }
 }
 

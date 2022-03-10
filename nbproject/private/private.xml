@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ExerciceFxmlController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GuideAddFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GuideAddFXML.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ExerciceFxml.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/OffreAddFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/CoursAddFXML.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Service/ExerciceService.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/SelectFrontBackFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Entities/Exercices.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ExercicesTakeFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/CoursAddFXMLController.java</file>
+        </group>
     </open-files>
 </project-private>

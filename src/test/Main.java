@@ -15,6 +15,7 @@ import Service.CoursService;
 import Service.ExerciceService;
 import Service.GuideService;
 import Service.OffresService;
+import Service.UserService;
 import Service.VolService;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -42,6 +43,11 @@ public class Main {
       //  System.out.println(cs.GetByidG(84));
       //  Cours c = new Cours("cours 1", "titre 1 ", "contenu1", gs.get(83));
      //   cs.Create(c);
+        UserService us = new UserService(); 
+        
+        OffresService os = new OffresService(); 
+      //  os.UpdatePriceFact(us.getUserlogged().getId());
+//        us.UpdateUserOffre(34,us.getUserlogged().getId() );
     
      //   System.out.println(gs.getByVolDest("tunis"));
      //   System.out.println(gs.getBytitre("Titre Guide"));
@@ -91,10 +97,10 @@ public class Main {
         //          Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         //      }
         //cs.CertifPDF();
-        
-          Offres oup = new Offres(22, "hellloo im updated", 15, "heloooo", 500);
-          //so.Create(oup);
-        System.out.println(so.nbrv(oup));
+//        
+//          Offres oup = new Offres(22, "hellloo im updated", 15, "heloooo", 500);
+//          //so.Create(oup);
+//        System.out.println(so.nbrv(oup));
     }
     
 }

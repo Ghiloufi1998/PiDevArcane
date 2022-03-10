@@ -142,5 +142,21 @@ public class OffresService implements IService<Offres>{
         return x;
     }
 
+       public void UpdatePriceFact(int id, String Destination) {
+          try {
+            String req = "UPDATE facture set facture.Montant_ttc = ( facture.Montant_ttc - (facture.Montant_ttc*( select offres.Pourcentage_red from reservation,offres,user,facture\n" +
+" WHERE reservation.rev_ID=facture.rev_ID and offres.ID_off=user.id_offre and reservation.ID_user=user.id) /100)) \n" +
+"  WHERE facture.ID_fac=(select facture.ID_fac from reservation,offres,user,facture WHERE reservation.rev_ID=facture.rev_ID \n" +
+"and offres.ID_off=user.id_offre and reservation.ID_user=user.id and user.id = ? and UPPER(?)=UPPER(reservation.Destination));";
+            PreparedStatement ps = cnx.prepareStatement(req);
+               ps.setInt(1,id );
+               ps.setString(2,Destination );
+            ps.executeUpdate();
+              System.out.println("Offre appliqué avec succès");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(OffresService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    } 
     
 }

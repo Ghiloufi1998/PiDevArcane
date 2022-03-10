@@ -12,6 +12,31 @@
       <Text fx:id="title" layoutX="576.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <SplitPane dividerPositions="0.5" layoutX="294.0" layoutY="64.0" orientation="VERTICAL" prefHeight="560.0" prefWidth="935.0">
         <items>
+          <AnchorPane fx:id="ex2" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Text fx:id="qs2" layoutX="64.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="ans2" layoutX="534.0" layoutY="114.0" prefWidth="150.0" />
+                  <Text layoutX="571.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réponse">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btn5" layoutX="784.0" layoutY="219.0" mnemonicParsing="false" onAction="#getHint" text="Aidez Moi ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="hint1" layoutX="305.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
           <AnchorPane fx:id="ex1" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
                   <Text fx:id="qs1" layoutX="68.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -25,17 +50,12 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-               </children>
-            </AnchorPane>
-          <AnchorPane fx:id="ex2" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-               <children>
-                  <Text fx:id="qs2" layoutX="64.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                  <Button fx:id="btn5" layoutX="785.0" layoutY="217.0" mnemonicParsing="false" onAction="#getHint2" text="Aidez Moi ">
                      <font>
-                        <Font size="25.0" />
+                        <Font size="21.0" />
                      </font>
-                  </Text>
-                  <ComboBox fx:id="ans2" layoutX="534.0" layoutY="114.0" prefWidth="150.0" />
-                  <Text layoutX="571.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réponse">
+                  </Button>
+                  <Text fx:id="hint2" layoutX="305.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                      <font>
                         <Font size="20.0" />
                      </font>

@@ -33,9 +33,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import tray.animations.AnimationType;
@@ -86,6 +89,40 @@ public class GuideAddFXMLController implements Initializable {
     private ComboBox<String> combolev;
     @FXML
     private ComboBox<String> combocoun;
+    @FXML
+    private BorderPane bp;
+    @FXML
+    private Button voyage_btn;
+    @FXML
+    private Button heb_btn;
+    @FXML
+    private Button transport_btn;
+    @FXML
+    private Button prom_btn;
+    @FXML
+    private Button reserv_btn;
+    @FXML
+    private Button sondage_btn;
+    @FXML
+    private Button prod_btn;
+    @FXML
+    private Button cmd_btn;
+    @FXML
+    private Button forum_btn;
+    @FXML
+    private Button reclam_btn;
+    @FXML
+    private Button reclam_btn1;
+    @FXML
+    private AnchorPane Transports;
+    @FXML
+    private ImageView user_image;
+    @FXML
+    private Button profile_btn;
+    @FXML
+    private Button mdp_btn;
+    @FXML
+    private Button logout;
 
     /**
      * Initializes the controller class.
@@ -479,31 +516,17 @@ public class GuideAddFXMLController implements Initializable {
         });
     }
 
-  @FXML
-    private void cours(ActionEvent event) throws IOException {
-        
-     
-        GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/CoursAddFXML.fxml");
+ 
+
+    @FXML
+    private void Hebergement(ActionEvent event) {
     }
 
     @FXML
-    private void Exercice(ActionEvent event) throws IOException {
-
-        GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/ExerciceFxml.fxml");
-    }
-    
-
-    @FXML
-    private void guide(ActionEvent event) throws IOException {
- GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/GuideAddFXML.fxml");
+    private void Transport(ActionEvent event) {
     }
 
     @FXML
-    private void offres(ActionEvent event) throws IOException {
- GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/OffreAddFXML.fxml");
+    private void STAT(ActionEvent event) {
     }
 }

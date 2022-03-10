@@ -34,8 +34,8 @@ Connection cnx;
     @Override
     public void Create(Exercices t) {
        try {
-            String req = "INSERT INTO exercices (Type,Question,Reponse,ID_crs) VALUES"
-                    + " ( '" + t.getType()+ "','" + t.getQuestion()+ "','" + t.getReponse()+ "','" + t.getCours().getID_crs()+ "')";
+            String req = "INSERT INTO exercices (Type,Question,Reponse,Hint,ID_crs) VALUES"
+                    + " ( '" + t.getType()+ "','" + t.getQuestion()+ "','" + t.getReponse()+ "','"+ t.getHint()+ "','" + t.getCours().getID_crs()+ "')";
             Statement st = cnx.createStatement();
              System.out.println("hehehehehe");
             st.executeUpdate(req);
@@ -48,13 +48,14 @@ Connection cnx;
     @Override
     public void Update(Exercices t) {
       try {
-            String req = "update Exercices set Type = ? , Question = ?, Reponse = ? , id_crs= ? where ID_ex = ?";
+            String req = "update Exercices set Type = ? , Question = ?, Reponse = ?, Hint = ?  , id_crs= ? where ID_ex = ?";
             PreparedStatement ps = cnx.prepareStatement(req);
             ps.setString(1, t.getType());
             ps.setString(2, t.getQuestion());
             ps.setString(3, t.getReponse());
-            ps.setInt(4, t.getCours().getID_crs());
-            ps.setInt(5, t.getID_ex());
+            ps.setString(4, t.getHint());
+            ps.setInt(5, t.getCours().getID_crs());
+            ps.setInt(6, t.getID_ex());
             ps.executeUpdate();
               System.out.println("donenenenenen");
             
@@ -91,6 +92,7 @@ Connection cnx;
                 o.setID_ex(rs.getInt("id_ex"));
                 o.setType(rs.getString("Type"));
                 o.setQuestion(rs.getString("Question"));
+                o.setHint(rs.getString("Hint"));
                 o.setReponse(rs.getString("Reponse"));
              
                
@@ -113,6 +115,7 @@ Connection cnx;
         while (rs.next()){    
          e.setQuestion(rs.getString(("Question")));
          e.setReponse(rs.getString("Reponse"));
+         e.setHint(rs.getString("Hint"));
          e.setType(rs.getString("Type"));
          e.setID_crs(rs.getInt("id_ex"));
          e.setID_ex(rs.getInt("id_ex"));
@@ -156,6 +159,7 @@ Connection cnx;
                 o.setType(rs.getString("Type"));
                 o.setQuestion(rs.getString("Question"));
                 o.setReponse(rs.getString("Reponse"));
+                o.setHint(rs.getString("Hint"));
                 o.setID_crs(rs.getInt("ID_crs"));
                 list.add(o);
             }

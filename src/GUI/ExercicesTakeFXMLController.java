@@ -10,6 +10,7 @@ import Service.CertifService;
 import Service.ExerciceService;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +19,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -51,6 +53,12 @@ public class ExercicesTakeFXMLController implements Initializable {
     private Button btn;
     @FXML
     private Button btn2;
+    @FXML
+    private Button btn5;
+    @FXML
+    private Text hint1;
+    @FXML
+    private Text hint2;
 
     /**
      * Initializes the controller class.
@@ -60,7 +68,12 @@ public class ExercicesTakeFXMLController implements Initializable {
         ObservableList<String> list = FXCollections.observableArrayList("Oui", "Non");
         ans1.setItems(list);
         ans2.setItems(list);
-        
+        btn2.setDisable(true);
+//         if (ans1.getValue().isEmpty() || (ans1.getValue().isEmpty())){
+//            System.out.println("hhhhhhhhhhhhhhhhhhhhhhfalssee");
+//            
+//        }
+//        
         
        
         
@@ -89,10 +102,45 @@ public class ExercicesTakeFXMLController implements Initializable {
        
 
     @FXML
+    private void getHint(ActionEvent event) {
+          ObservableList <Exercices> e = es.GetQuestionByidcrs(x);
+         Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert2.setTitle("Êtes-vous Sure ?  ");
+                    alert2.setContentText("Votre Score aura -20 points si vous utiliser cette option  ");
+                    alert2.setHeaderText(null);
+                   
+                    Optional<ButtonType> action1 = alert2.showAndWait();
+                     if (action1.get() == ButtonType.OK) {
+                         score = score -20 ;
+                         hint1.setText(e.get(0).getHint());
+                        
+                     }
+                     
+        
+    }
+
+    @FXML
+    private void getHint2(ActionEvent event) {
+            ObservableList <Exercices> e = es.GetQuestionByidcrs(x);
+         Alert alert4 = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert4.setTitle("Êtes-vous Sure ?  ");
+                    alert4.setContentText("Votre Score aura -20 points si vous utiliser cette option  ");
+                    alert4.setHeaderText(null);
+               
+                    Optional<ButtonType> action2 = alert4.showAndWait();
+                     if (action2.get() == ButtonType.OK) {
+                         score = score -20 ;
+                         hint2.setText(e.get(1).getHint());
+                        
+                     }
+    }
+    @FXML
     private void CalculRslt(ActionEvent event) {
         ObservableList <Exercices> e = es.GetQuestionByidcrs(x);
+       
+        
        if (ans1.getValue().equals(e.get(0).getReponse()) && (ans2.getValue().equals(e.get(1).getReponse()))){
-              score = 200;   
+              score = score + 200;   
               btn2.setDisable(false);
                 Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
                     alert2.setTitle("Félicitations ");
@@ -102,7 +150,7 @@ public class ExercicesTakeFXMLController implements Initializable {
           
           }
           else if (ans1.getValue().equals(e.get(0).getReponse()) || (ans2.getValue().equals(e.get(1).getReponse()))){
-              score = 100; 
+              score = score + 100; 
               btn2.setDisable(false);
                 Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
                     alert2.setTitle("Félicitations ");
@@ -114,7 +162,7 @@ public class ExercicesTakeFXMLController implements Initializable {
           else 
           {
               score =0 ; 
-              
+                btn2.setDisable(true);
               Alert alert2 = new Alert(Alert.AlertType.WARNING);
                     alert2.setTitle("Malheuresement ");
                     alert2.setContentText("Veuillez vérifier vos Réponses , Votre Score est "+String.valueOf(score));
@@ -129,6 +177,9 @@ public class ExercicesTakeFXMLController implements Initializable {
     private void GetUserCertif(ActionEvent event) throws SQLException {
         cert.CertifPDF(score);
     }
+
+                     
+        
+    }
      
     
-}

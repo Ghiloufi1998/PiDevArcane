@@ -31,8 +31,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.util.Duration;
 import tray.animations.AnimationType;
 import tray.notification.NotificationType;
@@ -78,6 +81,44 @@ public class ExerciceFxmlController implements Initializable {
     SortedList<Exercices> sort = new SortedList<>(filter);
     @FXML
     private ComboBox<String> titleee;
+    @FXML
+    private Button voyage_btn;
+    @FXML
+    private Button heb_btn;
+    @FXML
+    private Button transport_btn;
+    @FXML
+    private Button prom_btn;
+    @FXML
+    private Button reserv_btn;
+    @FXML
+    private Button sondage_btn;
+    @FXML
+    private Button prod_btn;
+    @FXML
+    private Button cmd_btn;
+    @FXML
+    private Button forum_btn;
+    @FXML
+    private Button reclam_btn;
+    @FXML
+    private TextField hint;
+    @FXML
+    private TableColumn<Exercices, String> hintt;
+    @FXML
+    private BorderPane bp;
+    @FXML
+    private Button reclam_btn1;
+    @FXML
+    private AnchorPane Transports;
+    @FXML
+    private ImageView user_image;
+    @FXML
+    private Button profile_btn;
+    @FXML
+    private Button mdp_btn;
+    @FXML
+    private Button logout;
 
     /**
      * Initializes the controller class.
@@ -106,18 +147,20 @@ public class ExerciceFxmlController implements Initializable {
         typ.setCellValueFactory(new PropertyValueFactory<>("Type"));
         qs.setCellValueFactory(new PropertyValueFactory<>("Question"));
         ans.setCellValueFactory(new PropertyValueFactory<>("reponse"));
+        hintt.setCellValueFactory(new PropertyValueFactory<>("hint"));
         idcrs.setCellValueFactory(new PropertyValueFactory<>("ID_crs"));
         
        
     }
     @FXML
     private void insert(ActionEvent event) throws SQLException {
-        if (controleSaisieString(question) || controleSaisieString(reponse)); else {
+        if (controleSaisieString(question) || controleSaisieString(reponse) || controleSaisieString(hint)); else {
         if (validateInputs()){
          Exercices e = new Exercices();
         e.setType(comb.getValue());
         e.setQuestion(question.getText());
         e.setReponse(reponse.getText());
+        e.setHint(hint.getText());
           String x = titleee.getValue();
         int z = (cs.getBytitre(x)).get(0).getID_crs();
       
@@ -157,6 +200,7 @@ public class ExerciceFxmlController implements Initializable {
         comb.setValue(String.valueOf(typ.getCellData(index)));
         question.setText(String.valueOf(qs.getCellData(index)));
         reponse.setText(String.valueOf(ans.getCellData(index)));
+        hint.setText(String.valueOf(hintt.getCellData(index)));
       //  id_crs.setText(String.valueOf(idcrs.getCellData(index)));
         Exercices e = table.getSelectionModel().getSelectedItem();
         String g = cs.get(e.getID_crs()).getTitre();
@@ -172,6 +216,7 @@ public class ExerciceFxmlController implements Initializable {
         String typp = comb.getValue();
         String qss = question.getText();
         String ress = reponse.getText();
+        String hinttt = hint.getText();
         String tet = titleee.getValue();
         int z = 0;
         try {
@@ -181,7 +226,7 @@ public class ExerciceFxmlController implements Initializable {
         }
 //        Integer idcc = Integer.parseInt(idcou);
         Cours c1=cs.get(z);
-        Exercices ex = new Exercices(e.getID_ex(), typp, qss, ress, c1);
+        Exercices ex = new Exercices(e.getID_ex(), typp, qss, ress,hinttt, c1);
               
             es.Update(ex);
             ShowTable();
@@ -264,31 +309,16 @@ public class ExerciceFxmlController implements Initializable {
         return false;
     }
 
-   @FXML
-    private void cours(ActionEvent event) throws IOException {
-        
-     
-        GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/CoursAddFXML.fxml");
+
+    @FXML
+    private void Hebergement(ActionEvent event) {
     }
 
     @FXML
-    private void Exercice(ActionEvent event) throws IOException {
-
-        GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/ExerciceFxml.fxml");
-    }
-    
-
-    @FXML
-    private void guide(ActionEvent event) throws IOException {
- GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/GuideAddFXML.fxml");
+    private void Transport(ActionEvent event) {
     }
 
     @FXML
-    private void offres(ActionEvent event) throws IOException {
- GuiNavigate nav = new GuiNavigate();
-        nav.navigate(event, "PIDEV", "/GUI/OffreAddFXML.fxml");
+    private void STAT(ActionEvent event) {
     }
 }

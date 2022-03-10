@@ -14,62 +14,67 @@ public class Exercices {
     private String Type;
     private String Question ;
     private String Reponse ;
+    private String Hint;
     private Cours cours;
     private int ID_crs;
-
-    public Exercices(int ID_ex, String Type, String Question, String Reponse, Cours cours) {
-        this.ID_ex = ID_ex;
-        this.Type = Type;
-        this.Question = Question;
-        this.Reponse = Reponse;
-        this.cours = cours;
-    }
 
     public Exercices() {
     }
 
-    public Exercices(int ID_ex, String Type, String Question, String Reponse, int ID_crs) {
+    public Exercices(int ID_ex, String Type, String Question, String Reponse, String Hint) {
         this.ID_ex = ID_ex;
         this.Type = Type;
         this.Question = Question;
         this.Reponse = Reponse;
+        this.Hint = Hint;
+    }
+    
+
+    public Exercices(int ID_ex, String Type, String Question, String Reponse, String Hint, Cours cours, int ID_crs) {
+        this.ID_ex = ID_ex;
+        this.Type = Type;
+        this.Question = Question;
+        this.Reponse = Reponse;
+        this.Hint = Hint;
+        this.cours = cours;
         this.ID_crs = ID_crs;
+    }
+
+    public Exercices(String Type, String Question, String Reponse, String Hint, Cours cours, int ID_crs) {
+        this.Type = Type;
+        this.Question = Question;
+        this.Reponse = Reponse;
+        this.Hint = Hint;
+        this.cours = cours;
+        this.ID_crs = ID_crs;
+    }
+
+    public Exercices(int ID_ex, String Type, String Question, String Reponse, String Hint, Cours cours) {
+        this.ID_ex = ID_ex;
+        this.Type = Type;
+        this.Question = Question;
+        this.Reponse = Reponse;
+        this.Hint = Hint;
+        this.cours = cours;
+    }
+
+    public Exercices(String Type, String Question, String Reponse, String Hint, Cours cours) {
+        this.Type = Type;
+        this.Question = Question;
+        this.Reponse = Reponse;
+        this.Hint = Hint;
+        this.cours = cours;
     }
 
     public Exercices(Cours cours) {
         this.cours = cours;
     }
 
-    public Exercices(String Type, String Question, String Reponse, Cours cours) {
+    public Exercices(String Type, String Question, String Reponse, String Hint) {
         this.Type = Type;
         this.Question = Question;
         this.Reponse = Reponse;
-        this.cours = cours;
-    }
-
-    public Exercices(String Type, String Question, String Reponse, int ID_crs) {
-        this.Type = Type;
-        this.Question = Question;
-        this.Reponse = Reponse;
-        this.ID_crs = ID_crs;
-    }
-    
-
-    public Exercices(int ID_ex, String Type, String Question, String Reponse, Cours cours, int ID_crs) {
-        this.ID_ex = ID_ex;
-        this.Type = Type;
-        this.Question = Question;
-        this.Reponse = Reponse;
-        this.cours = cours;
-        this.ID_crs = ID_crs;
-    }
-
-    public Exercices(String Type, String Question, String Reponse, Cours cours, int ID_crs) {
-        this.Type = Type;
-        this.Question = Question;
-        this.Reponse = Reponse;
-        this.cours = cours;
-        this.ID_crs = ID_crs;
+        this.Hint = Hint;
     }
 
     public int getID_ex() {
@@ -86,6 +91,10 @@ public class Exercices {
 
     public String getReponse() {
         return Reponse;
+    }
+
+    public String getHint() {
+        return Hint;
     }
 
     public Cours getCours() {
@@ -112,6 +121,10 @@ public class Exercices {
         this.Reponse = Reponse;
     }
 
+    public void setHint(String Hint) {
+        this.Hint = Hint;
+    }
+
     public void setCours(Cours cours) {
         this.cours = cours;
     }
@@ -122,8 +135,9 @@ public class Exercices {
 
     @Override
     public String toString() {
-        return "Exercices{" + "ID_ex=" + ID_ex + ", Type=" + Type + ", Question=" + Question + ", Reponse=" + Reponse + ", cours=" + cours + ", ID_crs=" + ID_crs + '}';
+        return "Exercices{" + "ID_ex=" + ID_ex + ", Type=" + Type + ", Question=" + Question + ", Reponse=" + Reponse + ", Hint=" + Hint + ", cours=" + cours + ", ID_crs=" + ID_crs + '}';
     }
+    
 
     
 

@@ -287,6 +287,24 @@ public class UserService {
         }
         return list;
     }
+     
+      public void UpdateUserOffre(int id_o, int id) {
+         try {
+        String requeteUpdate = "UPDATE  User set `id_offre`=? where `id`=? ";
+
+          
+             PreparedStatement pst = cnx.prepareStatement(requeteUpdate);
+        
+         pst.setInt(1,id_o);
+         pst.setInt(2,id);
+        
+            
+            pst.executeUpdate();
+            System.out.println("modifée avec succés ");
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+      }
 }
 
 
