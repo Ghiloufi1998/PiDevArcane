@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="328.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TOTOController">
+   <children>
+      <ImageView fx:id="imagelab" fitHeight="139.0" fitWidth="180.0" layoutX="53.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="id" layoutX="41.0" layoutY="191.0" prefHeight="28.0" prefWidth="77.0" text="id" />
+      <Label fx:id="adresse" layoutX="41.0" layoutY="225.0" prefHeight="17.0" prefWidth="101.0" text="description" />
+      <Label fx:id="disponibilité" layoutX="40.0" layoutY="252.0" prefHeight="17.0" prefWidth="88.0" text="Dispo" />
+      <Label fx:id="image" layoutX="42.0" layoutY="277.0" prefHeight="17.0" prefWidth="88.0" text="image" />
+      <Label fx:id="prix" layoutX="143.0" layoutY="211.0" prefHeight="17.0" prefWidth="88.0" text="Prix" />
+      <Label fx:id="type" layoutX="143.0" layoutY="244.0" prefHeight="17.0" prefWidth="88.0" text="Type" />
+      <Button fx:id="b_voyage" layoutX="130.0" layoutY="299.0" mnemonicParsing="false" onAction="#List_Voyage" text="Voir Voyage" />
+      <Label fx:id="id" disable="true" layoutX="118.0" layoutY="183.0" prefHeight="28.0" prefWidth="77.0" text="id" visible="false" />
+      <Button fx:id="b_transport" layoutX="46.0" layoutY="299.0" mnemonicParsing="false" onAction="#List_Hebergement" text="Hebergement" />
+   </children>
+</AnchorPane>
