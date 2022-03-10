@@ -7,14 +7,17 @@
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/GestHomePage.fxml</file>
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/entities/Sondage.java</file>
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/SondageController.java</file>
+            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/services/ServiceSondage.java</file>
+            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/entities/Questions.java</file>
+            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/ReponsesController.java</file>
+            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/entities/Réponses.java</file>
+            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/services/ServiceRéponses.java</file>
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/LoginController.java</file>
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/GestHomePageController.java</file>
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/ResultatController.java</file>
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/services/ServiceQuestions.java</file>
-            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/services/ServiceSondage.java</file>
-            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/entities/Questions.java</file>
             <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/QuestionsController.java</file>
-            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/entities/Réponses.java</file>
+            <file>file:/C:/Users/user/Downloads/JDBC/JDBC/src/GUI/Resultat.fxml</file>
         </group>
     </open-files>
 </project-private>

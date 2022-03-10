@@ -56,13 +56,9 @@ public class QuestionsController implements Initializable {
     @FXML
     private TableView<Questions> tablequestion;
     @FXML
-    private TableColumn<Questions,Integer> colidq;
-    @FXML
     private TableColumn<Questions, String> colquestion;
     @FXML
     private TableColumn<Questions, String> coltype;
-    @FXML
-    private TableColumn<Questions, Integer> colidsondg;
     @FXML
     private TextField txtquestion;
     
@@ -126,10 +122,10 @@ public class QuestionsController implements Initializable {
         ObservableList<Questions> list = getTableList();
         
         tablequestion.setItems(list);
-        colidq.setCellValueFactory(new PropertyValueFactory<>("Question_id"));
+       // colidq.setCellValueFactory(new PropertyValueFactory<>("Question_id"));
         colquestion.setCellValueFactory(new PropertyValueFactory<>("question"));
         coltype.setCellValueFactory(new PropertyValueFactory<>("type"));
-        colidsondg.setCellValueFactory(new PropertyValueFactory<>("sondage_id"));
+       // colidsondg.setCellValueFactory(new PropertyValueFactory<>("sondage_id"));
         
         
         
@@ -209,14 +205,28 @@ public class QuestionsController implements Initializable {
             tr.setNotificationType(NotificationType.ERROR);
             tr.showAndDismiss(Duration.millis(5000));
         }else{
+            if( (sq.nbryesno()<3) && (sq.nbrtext()<1) &&(sq.nbrtext()<1) ){
             Insert();
              TrayNotification tr = new TrayNotification();
             AnimationType type = AnimationType.POPUP;
             tr.setAnimationType(type);
             tr.setTitle("Question");
-            tr.setMessage("Ajoutée failed ");
+            tr.setMessage("Ajoutée en succés ");
             tr.setNotificationType(NotificationType.SUCCESS);
+            tr.showAndDismiss(Duration.millis(5000));}
+            else {
+                 TrayNotification tr = new TrayNotification();
+            AnimationType type = AnimationType.POPUP;
+            tr.setAnimationType(type);
+            tr.setTitle("Nombre Questions dépassé ");
+            tr.setMessage("Espace insuffisant   ");
+            tr.setNotificationType(NotificationType.ERROR);
             tr.showAndDismiss(Duration.millis(5000));
+            
+            
+            
+            
+            }
             
         }
         

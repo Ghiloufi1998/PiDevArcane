@@ -261,7 +261,51 @@ public class ServiceQuestions implements IService<Questions> {
         }
         return n;}
        
-       
+        public int nbryesno() {
+       int n = 0;
+        try {
+            String req ="SELECT COUNT(sondage.sondage_id) nbr, sondage.sujet FROM questions ,sondage WHERE questions.type='YES/NO' and sondage.sondage_id=questions.sondage_id GROUP BY sondage.sondage_id";
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            
+            while(rs.next()){
+               n=rs.getInt("nbr");
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ServiceQuestions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return n;}
+        public int nbrrate() {
+       int n = 0;
+        try {
+            String req ="SELECT COUNT(sondage.sondage_id) nbr, sondage.sujet FROM questions ,sondage WHERE questions.type='Rate' and sondage.sondage_id=questions.sondage_id GROUP BY sondage.sondage_id";
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            
+            while(rs.next()){
+               n=rs.getInt("nbr");
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ServiceQuestions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return n;}
+        public int nbrtext() {
+       int n = 0;
+        try {
+            String req="SELECT COUNT(sondage.sondage_id) nbr, sondage.sujet FROM questions ,sondage WHERE type='Text' and sondage.sondage_id=questions.sondage_id GROUP BY sondage.sondage_id";
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            
+            while(rs.next()){
+               n=rs.getInt("nbr");
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ServiceQuestions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return n;}
        
        
        

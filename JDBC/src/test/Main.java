@@ -22,18 +22,18 @@ public class Main {
     public static void main(String[] args) {
          MyDB db = new MyDB();
          //--------------Service Question------------------
-        ServiceQuestions sq = new ServiceQuestions();
-         ServiceSondage ss = new ServiceSondage();
-         ServiceRéponses sr = new ServiceRéponses();
-        Sondage s = new Sondage(1,"Avis","Voyage");
-        Sondage s2 = new Sondage(3 ,"hhh","oooo");
-        Questions q = new Questions("aaa",s, "text");
+      ServiceQuestions sq = new ServiceQuestions();
+//         ServiceSondage ss = new ServiceSondage();
+//         ServiceRéponses sr = new ServiceRéponses();
+//        Sondage s = new Sondage(1,"Avis","Voyage");
+//        Sondage s2 = new Sondage(3 ,"hhh","oooo");
+//        Questions q = new Questions("aaa",s, "text");
        // Questions q1 = new Questions( s2, "iii", "qlib", "none", "none");
         //Questions q1 = new Questions(1,s2,"iaaaaaaaa?", "video");
         //Questions q2= new Questions(5, s, "hjnmhdgcvshbsb", "qcm");
         //sq.modifier(q1);
        // sq.ajout(q);
-        System.out.println(sq.questRate3(27));
+       // System.out.println(sq.questRate3(27));
         //System.out.println(sq.afficher());
        // System.out.println(sq.get("aVis"));
        //-----------------SERVICE REPONSE---------------------- 
@@ -55,9 +55,12 @@ public class Main {
        // ss.ajout(s1);
         //ss.supprimer(2);
         ss.modifier(s2);*/
-        
-        //System.out.println(sr.afficher(q2));
-        
+//         ss =new ServiceSondage();
+//        System.out.println(ss.getid("Avis"));
+//        
+        System.out.println(sq.nbrrate());
+        System.out.println(sq.nbrtext());
+        System.out.println(sq.nbryesno());
          
         
         

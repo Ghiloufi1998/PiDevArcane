@@ -10,6 +10,10 @@ import java.io.IOException;
 import javafx.collections.ObservableList;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.SQLException;
+import static java.util.Locale.filter;
+import static java.util.Locale.filter;
+import static java.util.Locale.filter;
 import static java.util.Locale.filter;
 import static java.util.Locale.filter;
 import static java.util.Locale.filter;
@@ -19,7 +23,9 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import static javafx.collections.FXCollections.observableList;
+import static javafx.collections.FXCollections.sort;
 import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,6 +54,7 @@ import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
 import utils.MyDB;
 
+
 /**
  * FXML Controller class
  *
@@ -64,8 +71,6 @@ public class SondageController implements Initializable {
     @FXML
     private Button btnModifier;
     @FXML
-    private TableColumn<Sondage, Integer> colid;
-    @FXML
     private TableColumn<Sondage, String> colsujet;
     @FXML
     private TableColumn<Sondage, String> colcategorie;
@@ -80,6 +85,8 @@ public class SondageController implements Initializable {
     @FXML
     private Button btnajoutq;
     private TextField recherche;
+    @FXML
+    private TextField chercher;
     /**
      * Initializes the controller class.
      */
@@ -92,18 +99,47 @@ public class SondageController implements Initializable {
         validationSupport.registerValidator(Textcategorie, Validator.createEmptyValidator("Text obligatoire"));
         
     }  
-    
+    @FXML
+    private void Chercher(ActionEvent event) {
+        FilteredList<Sondage> filter = new FilteredList<>(getTableList(), e -> true);
+    SortedList<Sondage> sort = new SortedList<>(filter);
+
+        chercher.setOnKeyReleased(e -> {
+            chercher.textProperty().addListener((observable, oldValue, newValue) -> {
+                filter.setPredicate(t -> {
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+                    String lowerCaseFilter = newValue.toLowerCase();
+                    if (t.getSujet().toLowerCase().contains(lowerCaseFilter)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+
+            });
+            sort.comparatorProperty().bind(table.comparatorProperty());
+            table.setItems(sort);
+        });
+
+    }
+    public static ObservableList<Sondage> getlistASC() throws SQLException {
+        ServiceSondage ts = new ServiceSondage();
+        ObservableList<Sondage> list = FXCollections.observableArrayList(ts.afficher());
+        return list;
+    }
      private ObservableList<Sondage> getTableList() {
        
-        ObservableList<Sondage> List = ss.afficher();
-        return List ;
-        
+        ServiceSondage ts = new ServiceSondage();
+        ObservableList<Sondage> list = FXCollections.observableArrayList(ts.afficher());
+        return list;
     }
     
     public void ShowTable() {
         ObservableList<Sondage> list = getTableList();
         table.setItems(list);
-        colid.setCellValueFactory(new PropertyValueFactory<>("sondage_id"));
+       // colid.setCellValueFactory(new PropertyValueFactory<>("sondage_id"));
         colsujet.setCellValueFactory(new PropertyValueFactory<>("sujet"));
         colcategorie.setCellValueFactory(new PropertyValueFactory<>("catégorie"));
         
@@ -323,6 +359,7 @@ public class SondageController implements Initializable {
 
         }
     }
+
 
 }
 

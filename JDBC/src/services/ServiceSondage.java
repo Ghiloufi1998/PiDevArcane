@@ -156,6 +156,28 @@ public class ServiceSondage implements IService<Sondage>  {
         }
         return list;
     }
+      
+      public int getid(String S) {
+        Sondage so = new Sondage();
+        int id=0; 
+        try {
+            String req ="select sondage_id s from Sondage where Upper(Sondage.Sujet)= '"+S.toUpperCase()+"'";
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+           
+            while (rs.next()){
+           id=rs.getInt("s");
+            
+            
+            
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ServiceSondage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
+    }
+    
     
     
      

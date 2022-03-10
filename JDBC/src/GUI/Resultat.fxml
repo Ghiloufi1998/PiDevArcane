@@ -16,17 +16,13 @@
       <PieChart fx:id="rst" layoutX="446.0" layoutY="244.0" prefHeight="297.0" prefWidth="406.0" title="resultat" />
       <TableView fx:id="tableau" layoutX="335.0" layoutY="81.0" onMouseMoved="#afficherstat" prefHeight="158.0" prefWidth="560.0">
         <columns>
-          <TableColumn fx:id="id" prefWidth="61.0" text="ID" />
           <TableColumn fx:id="question" prefWidth="268.0" text="Question" />
-            <TableColumn fx:id="type" minWidth="7.0" prefWidth="54.0" text="Type" />
-            <TableColumn fx:id="sondageid" prefWidth="168.0" text="Sondage_id" />
+            <TableColumn fx:id="type" minWidth="7.0" prefWidth="291.0" text="Type" />
         </columns>
       </TableView>
       <TableView fx:id="tab" editable="true" layoutX="852.0" layoutY="297.0" prefHeight="151.0" prefWidth="390.0">
         <columns>
-          <TableColumn fx:id="idd" minWidth="0.0" prefWidth="0.0" text="ID" />
-          <TableColumn fx:id="rep" prefWidth="309.0" text="Réponses" />
-            <TableColumn fx:id="idquestt" minWidth="0.0" prefWidth="0.0" text="ID question" />
+          <TableColumn fx:id="rep" minWidth="0.0" prefWidth="389.0" text="Réponses" />
         </columns>
       </TableView>
       <BarChart fx:id="RateChart" layoutX="36.0" layoutY="244.0" prefHeight="297.0" prefWidth="365.0">

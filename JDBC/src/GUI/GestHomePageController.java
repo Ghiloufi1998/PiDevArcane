@@ -28,6 +28,26 @@ public class GestHomePageController implements Initializable {
     private Button btnSondage;
     @FXML
     private Button btnStat;
+    @FXML
+    private Button voyage_btn;
+    @FXML
+    private Button heb_btn;
+    @FXML
+    private Button transport_btn;
+    @FXML
+    private Button prom_btn;
+    @FXML
+    private Button reserv_btn;
+    @FXML
+    private Button sondage_btn;
+    @FXML
+    private Button prod_btn;
+    @FXML
+    private Button cmd_btn;
+    @FXML
+    private Button forum_btn;
+    @FXML
+    private Button reclam_btn;
 
     /**
      * Initializes the controller class.
