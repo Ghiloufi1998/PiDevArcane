@@ -154,7 +154,7 @@ public class MapsController  extends MapView {
 	 */
 	public MapsController(String pString,Double xmap, Double ymap) {
 
-		JFrame frame = new JFrame("Chicago-Data: "+pString);
+		JFrame frame = new JFrame("Destination: "+pString);
 
 
 		settingsCircle=new CircleOptions();
@@ -215,7 +215,7 @@ public class MapsController  extends MapView {
               Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("loading");
                 alert.setHeaderText("loading");
-                alert.setContentText("pouvez-vous attendre quelques secondes pour le chargement de map");
+                alert.setContentText("Chargement...");
                 alert.show();
                 try{
                

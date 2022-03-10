@@ -29,10 +29,10 @@ public class NewFXMain extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../GUI/Maps.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../GUI/StatsReser.fxml"));
             //final MapsController example = new MapsController("test");
 		//example.generateMarker(map.getCenter());
-            //Parent root = FXMLLoader.load(getClass().getResource("../GUI/AjouterVoyage.fxml"));
+            //Parent root = FXMLLoader.load(getClass().getResource("../GUI/AjoutesrVoyage.fxml"));
            // Parent root = FXMLLoader.load(getClass().getResource("../GUI/ModifierVoyage.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);

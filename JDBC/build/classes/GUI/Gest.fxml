@@ -2,10 +2,13 @@
 
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
@@ -13,7 +16,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GestController">
    <children>
-      <Pane prefHeight="1118.0" prefWidth="377.0" style="-fx-background-color: DODGERBLUE;" styleClass="w" AnchorPane.leftAnchor="0.0">
+      <Pane layoutX="1373.0" layoutY="1177.0" prefHeight="698.0" prefWidth="419.0" style="-fx-background-color: DODGERBLUE;" styleClass="w" AnchorPane.leftAnchor="1373.0">
          <children>
             <Button layoutX="7.0" layoutY="248.0" mnemonicParsing="false" onAction="#Vol" prefHeight="31.0" prefWidth="308.0" style="-fx-background-color: DODGERBLUE;" text="Gérer Vols">
                <textFill>
@@ -54,7 +57,7 @@
                   <Font name="System Bold" size="21.0" />
                </font>
             </Button>
-            <ImageView fx:id="img" fitHeight="213.0" fitWidth="249.0" layoutX="59.0" layoutY="14.0">
+            <ImageView fx:id="img" fitHeight="213.0" fitWidth="249.0" layoutX="83.0" layoutY="9.0">
                <viewport>
                   <Rectangle2D />
                </viewport>
@@ -64,16 +67,128 @@
             </ImageView>
          </children>
       </Pane>
-      <Text layoutX="538.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espace Gestionnaire " wrappingWidth="490.6708984375">
+      <Text layoutX="638.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espace Gestionnaire " wrappingWidth="490.6708984375">
          <font>
             <Font size="45.0" />
          </font>
       </Text>
-      <ImageView fx:id="im" fitHeight="563.0" fitWidth="542.0" layoutX="512.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="im" fitHeight="563.0" fitWidth="542.0" layoutX="759.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images.png" />
          </image>
       </ImageView>
       <Button fx:id="qt" layoutX="1148.0" layoutY="824.0" mnemonicParsing="false" onAction="#quitter" prefHeight="45.0" prefWidth="106.0" text="Quitter" />
+      <VBox layoutX="2.0" layoutY="-8.0" prefHeight="1088.0" prefWidth="360.0" style="-fx-background-color: DODGERBLUE;">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="220.0" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img1" fitHeight="287.0" fitWidth="358.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@3.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="10.0" layoutY="310.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Documents/IHEB/dhia/src/GUI/image/icons8-around-the-globe-100.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="heb_btn" mnemonicParsing="false" onAction="#Transport" prefHeight="46.0" prefWidth="182.0" style="-fx-background-color: transparent;" text="Gérer Transport" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="202.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Documents/IHEB/dhia/src/gui/image/icons8-around-the-globe-100.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Hebergement_btn" mnemonicParsing="false" onAction="#Hebergement" prefHeight="46.0" prefWidth="199.0" style="-fx-background-color: transparent;" text="Gérer Hebergement" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="256.0" prefHeight="54.0" prefWidth="286.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Documents/IHEB/dhia/src/gui/image/icons8-around-the-globe-100.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="prom_btn" mnemonicParsing="false" onAction="#Vol" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Gérer Vols" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="418.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Documents/IHEB/dhia/src/gui/image/icons8-around-the-globe-100.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="reserv_btn" mnemonicParsing="false" onAction="#Stats" prefHeight="46.0" prefWidth="259.0" style="-fx-background-color: transparent;" text="Statistiques Voyages Organisés" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Documents/IHEB/dhia/src/gui/image/icons8-around-the-globe-100.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="sondage_btn" mnemonicParsing="false" prefHeight="46.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Gérer Sondage" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Documents/IHEB/dhia/src/gui/image/icons8-around-the-globe-100.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="prod_btn" mnemonicParsing="false" onAction="#Voyages" prefHeight="46.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Gérer Voyages " textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Documents/IHEB/dhia/src/gui/image/icons8-around-the-globe-100.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="0.0" prefWidth="176.0" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

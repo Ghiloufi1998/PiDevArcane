@@ -39,6 +39,20 @@ public class GestController implements Initializable {
     private ImageView im;
     @FXML
     private Button qt;
+    @FXML
+    private ImageView img1;
+    @FXML
+    private Button heb_btn;
+    @FXML
+    private Button Hebergement_btn;
+    @FXML
+    private Button prom_btn;
+    @FXML
+    private Button reserv_btn;
+    @FXML
+    private Button sondage_btn;
+    @FXML
+    private Button prod_btn;
 
     /**
      * Initializes the controller class.
@@ -126,6 +140,15 @@ public class GestController implements Initializable {
             Platform.exit();
         });
         
-    }}
+    }
+
+    @FXML
+    private void Transport(ActionEvent event) {
+    }
+
+    @FXML
+    private void Hebergement(ActionEvent event) {
+    }
+}
     
 
