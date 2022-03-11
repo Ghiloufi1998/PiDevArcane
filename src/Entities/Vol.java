@@ -7,10 +7,10 @@ package Entities;
 
 /**
  *
- * @author Ghiloufi
+ * @author Acer
  */
 public class Vol {
-  private int Vol_id ;   
+  private int    Vol_id ;   
   private String Destination ;   
   private String Départ ;   
   private String Image ;   
@@ -67,6 +67,9 @@ public class Vol {
     public String toString() {
         return "Vol{" + "Vol_id=" + Vol_id + ", Destination=" + Destination + ", D\u00e9part=" + Départ + ", Image=" + Image + '}';
     }
-
+    
+  
+  
+  
   
 }

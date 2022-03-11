@@ -3,17 +3,47 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ExerciceFxmlController.java</file>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GuideAddFXMLController.java</file>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GuideAddFXML.fxml</file>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ExerciceFxml.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/utils/PatternEmail.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/reclamation.css</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/test/JavaFxMain.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/DashboardGestFXML.fxml</file>
             <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/OffreAddFXMLController.java</file>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/CoursAddFXML.fxml</file>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Service/ExerciceService.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ChangePwdFXML.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/LoginController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/test/Main.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GuideAddFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/DashboardAdminFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Service/UserService.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/FrontOffresFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Service/IService.java</file>
             <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/SelectFrontBackFXMLController.java</file>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Entities/Exercices.java</file>
-            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ExercicesTakeFXMLController.java</file>
             <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/CoursAddFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/RecupMDP.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ChangePwdFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GestReclamController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Entities/User.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ajouterUser.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/DashboardUserFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/DashboardUserFXML.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Service/OffresService.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/reclamation.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ajouteruser.css</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/SignUpController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Service/ReclamationService.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ProfileFXML.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/RecupMDPController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Service/GuideService.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/utils/Notification.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/DashboardGestFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GuideTakeFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/Entities/Reclamation.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/SignUp.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ReclamationController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/DashboardAdminFXML.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/GestReclam.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/login.fxml</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/ProfileFXMLController.java</file>
+            <file>file:/C:/Users/Ghiloufi/Documents/NetBeansProjects/PiDev/src/GUI/AjouterUserController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -9,12 +9,14 @@ import Entities.Cours;
 import Entities.Exercices;
 import Entities.Guide;
 import Entities.Offres;
+import Entities.Reclamation;
 import Entities.Vol;
 import Service.CertifService;
 import Service.CoursService;
 import Service.ExerciceService;
 import Service.GuideService;
 import Service.OffresService;
+import Service.ReclamationService;
 import Service.UserService;
 import Service.VolService;
 import java.sql.SQLException;
@@ -29,11 +31,15 @@ import javafx.collections.ObservableList;
 public class Main {
 
     public static void main(String[] args) throws SQLException {
-         OffresService so = new OffresService();
-        //    Offres o = new Offres("qsdqsdqs", 26, "sqdqsd", 20000);
-        
-        //  System.out.println(sp.Read());
-     //    VolService vs = new VolService();
+//         OffresService so = new OffresService();
+//        //    Offres o = new Offres("qsdqsdqs", 26, "sqdqsd", 20000);
+      UserService us = new UserService(); 
+  // us.login("ghiloufiwassim@gmail.com", "HI6KFV5I");
+        //  us.checkoldmdp("ghiloufiwassim@gmail.com", "ancdef123");
+  //us.changePassword("ancdef123", "ghiloufiwassim@gmail.com");
+//        
+//        //  System.out.println(sp.Read());
+//     //    VolService vs = new VolService();
     //     System.out.println(vs);
         //      System.out.println(vs.GetAllnumVols());
     //   CoursService cs = new CoursService();
@@ -43,9 +49,11 @@ public class Main {
       //  System.out.println(cs.GetByidG(84));
       //  Cours c = new Cours("cours 1", "titre 1 ", "contenu1", gs.get(83));
      //   cs.Create(c);
-        UserService us = new UserService(); 
-        
-        OffresService os = new OffresService(); 
+   //     UserService us = new UserService(); 
+//        Reclamation r  = new Reclamation();
+//        ReclamationService rs  = new ReclamationService();
+//        rs.Create(r);
+     //   OffresService os = new OffresService(); 
       //  os.UpdatePriceFact(us.getUserlogged().getId());
 //        us.UpdateUserOffre(34,us.getUserlogged().getId() );
     

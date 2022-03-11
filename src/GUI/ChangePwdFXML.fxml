@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.ChangePwdFXMLController">
+    <children>
+      <Label layoutX="95.0" layoutY="122.0" />
+      <HBox layoutX="-6.0" prefHeight="494.0" prefWidth="195.0" style="-fx-background-color: #332A7C;" />
+      <Label alignment="CENTER" layoutX="2.0" layoutY="154.0" prefHeight="61.0" prefWidth="188.0" text="Above &amp; Beyond" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="113.0" text="Vous receverez un mail " textFill="#332a7c">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="329.0" layoutY="137.0" text="De confirmation" textFill="#322a7ae1">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="42.0" prefHeight="80.0" prefWidth="331.0" text="Changer Mot de Passe" textFill="#332a7c">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="363.0" layoutY="178.0" prefHeight="35.0" prefWidth="188.0" />
+      <Label layoutX="254.0" layoutY="165.0" prefHeight="61.0" prefWidth="118.0" text="Votre E-mail" textFill="#332a7c">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="recuperer_btn" layoutX="213.0" layoutY="379.0" mnemonicParsing="false" onAction="#envoyer_code" text="M'envoyer le code" textFill="#071ae4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="oldmdp" layoutX="363.0" layoutY="218.0" prefHeight="35.0" prefWidth="188.0" />
+      <Label layoutX="215.0" layoutY="205.0" prefHeight="61.0" prefWidth="157.0" text="Ancien mot de passe" textFill="#332a7c">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newmdp" layoutX="363.0" layoutY="261.0" prefHeight="35.0" prefWidth="188.0" />
+      <Label layoutX="205.0" layoutY="248.0" prefHeight="61.0" prefWidth="157.0" text="Nouveau Mot de passe" textFill="#332a7c">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="confirmmdp" layoutX="363.0" layoutY="309.0" prefHeight="35.0" prefWidth="188.0" />
+      <Label layoutX="198.0" layoutY="290.0" prefHeight="61.0" prefWidth="168.0" text="Confirmer Mot de passe" textFill="#332a7c">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codeeconf" layoutX="389.0" layoutY="381.0" prefHeight="35.0" prefWidth="188.0" />
+      <Button fx:id="btnchange" layoutX="387.0" layoutY="436.0" mnemonicParsing="false" onAction="#change" text="Changer Mot de Passe" textFill="#071ae4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

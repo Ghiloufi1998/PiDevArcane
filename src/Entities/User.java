@@ -34,6 +34,21 @@ public class User {
     public User() {
 }
 
+    public User(String name, String fname, String gender, Date birthday, String adresse, String email, String password, String image, String role, int Nb_point, int id_offre) {
+        this.name = name;
+        this.fname = fname;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.adresse = adresse;
+        this.email = email;
+        this.password = password;
+        this.image = image;
+        this.role = role;
+        this.Nb_point = Nb_point;
+        this.id_offre = id_offre;
+    }
+    
+
     public User(int id, String name, String fname, String gender, Date birthday, String adresse, String email, String password, String image, String role, int Nb_point, int id_offre, Offres offre) {
         this.id = id;
         this.name = name;
