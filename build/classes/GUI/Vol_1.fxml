@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="colvol" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.VolController_1">
+   <children>
+      <Label layoutX="242.0" layoutY="26.0" prefHeight="21.0" prefWidth="145.0" text="Choisir Vol" />
+      <Button fx:id="btn" layoutX="260.0" layoutY="355.0" mnemonicParsing="false" onAction="#sui" text="Button" />
+      <TableView fx:id="Voyages" layoutX="96.0" layoutY="78.0" onMouseClicked="#clickone" prefHeight="266.0" prefWidth="410.0">
+         <columns>
+            <TableColumn fx:id="image" prefWidth="133.0" text="Image" />
+            <TableColumn fx:id="Départ" prefWidth="140.0" text="Départ" />
+            <TableColumn fx:id="prix" prefWidth="163.0" text="Prix" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReclamationController">
+    <stylesheets>
+        <URL value="@reclamation.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="743.0" prefWidth="949.0">
+         <children>
+            <BorderPane fx:id="bp" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1336.0">
+               <left>
+                  <VBox prefHeight="560.0" prefWidth="200.0" style="-fx-background-color: #332A7C;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="151.0" fitWidth="207.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/JDBC/src/gui/image/logo.png" />
+                           </image>
+                        </ImageView>
+                        <HBox layoutX="10.0" layoutY="364.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-width: 2px 0px 2px 0px;">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/JDBC/src/GUI/image/icons8-around-the-globe-100.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="Reserver_btn" alignment="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Réserver " textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="100.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="310.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-width: 2px 0px 2px 0px;">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/JDBC/src/gui/image/icons8-around-the-globe-100.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="rec_btn" mnemonicParsing="false" onAction="#reclamation" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Mes reclamations" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="202.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-width: 2px 0px 2px 0px;">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/JDBC/src/gui/image/icons8-around-the-globe-100.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="sondage_btn" mnemonicParsing="false" onAction="#sondage" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Sondage" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </left>
+               <right>
+                  <VBox prefHeight="700.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="user_image" fitHeight="120.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-width: 2px 2px 2px 2px; -fx-border-color: #FFFFFF;">
+                           <image>
+                              <Image url="@../../../../../Desktop/JDBC/src/gui/image/signin.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="23.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="profile_btn" mnemonicParsing="false" prefHeight="48.0" prefWidth="118.0" style="-fx-background-color: #00000000;" text="Profile">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/JDBC/src/gui/image/profile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="mdp_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" style="-fx-background-color: #00000000;" text="Changer MDP">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/JDBC/src/gui/image/changePassword.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logout" mnemonicParsing="false" prefHeight="50.0" prefWidth="121.0" style="-fx-background-color: #00000000;" text="Logout">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/JDBC/src/gui/image/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </right>
+               <children>
+                  <AnchorPane layoutY="90.0" prefHeight="46.0" prefWidth="1055.0" style="-fx-background-color: #31307D;" />
+                  <AnchorPane prefHeight="90.0" prefWidth="1055.0" style="-fx-background-color: f82249;" />
+                  <AnchorPane fx:id="Transports" layoutY="136.0" prefHeight="300.0" prefWidth="300" />
+               </children>
+               <center>
+                  <Pane BorderPane.alignment="CENTER">
+                     <children>
+                        <TextArea fx:id="Descriptions" layoutX="21.0" layoutY="230.0" prefHeight="252.0" prefWidth="866.0" promptText="free your mind..!" />
+                        <Label layoutX="38.0" layoutY="171.0" prefHeight="48.0" prefWidth="296.0" text="A VOS CLAVIERS :">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="env" layoutX="733.0" layoutY="503.0" onAction="#envoyer" text="Réclamer ! " textFill="#1b0bff">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+   
+</AnchorPane>

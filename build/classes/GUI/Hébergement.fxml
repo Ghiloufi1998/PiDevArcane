@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.HebergementController_1">
+   <children>
+      <Label layoutX="387.0" layoutY="59.0" prefHeight="62.0" prefWidth="414.0" text="Choisir Hébergement">
+         <font>
+            <Font name="Bookman Old Style" size="36.0" />
+         </font></Label>
+      <Button fx:id="btn" layoutX="556.0" layoutY="493.0" mnemonicParsing="false" onAction="#sui" text="terminer" />
+      <TableView fx:id="Voyages" layoutX="594.0" layoutY="152.0" onMouseClicked="#getSelected" prefHeight="266.0" prefWidth="327.0">
+         <columns>
+            <TableColumn fx:id="adresse" prefWidth="230.0" text="Adresse" />
+            <TableColumn fx:id="prix" prefWidth="96.0" text="Prix" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="img" fitHeight="200.0" fitWidth="224.0" layoutX="320.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="122.0" fitWidth="105.0" layoutX="1130.0" layoutY="23.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/crossed.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

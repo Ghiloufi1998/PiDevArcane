@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ExercicesTakeFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <BorderPane fx:id="bp" layoutX="-2.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="1347.0">
+               <left>
+                  <VBox prefHeight="560.0" prefWidth="200.0" style="-fx-background-color: #332A7C;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="199.0" fitWidth="198.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/274914255_1163575371049909_1750766618893680406_n.png" />
+                           </image>
+                        </ImageView>
+                        <HBox layoutX="10.0" layoutY="364.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-width: 2px 0px 2px 0px;">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-around-the-globe-100.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="voyage_btn" alignment="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Réserver " textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="100.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="310.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-width: 2px 0px 2px 0px;">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-around-the-globe-100.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="heb_btn" mnemonicParsing="false" onAction="#Hebergement" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Mes reclamations" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="202.0" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-width: 2px 0px 2px 0px;">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-around-the-globe-100.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="transport_btn" mnemonicParsing="false" onAction="#Transport" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Sondage" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </left>
+               <right>
+                  <VBox prefHeight="700.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="user_image" fitHeight="120.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-width: 2px 2px 2px 2px; -fx-border-color: #FFFFFF;">
+                           <image>
+                              <Image url="@../images/signin.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="23.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="profile_btn" mnemonicParsing="false" prefHeight="48.0" prefWidth="118.0" style="-fx-background-color: #00000000;" text="Profile">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/profile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="mdp_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" style="-fx-background-color: #00000000;" text="Changer MDP">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/changePassword.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logout" mnemonicParsing="false" prefHeight="50.0" prefWidth="121.0" style="-fx-background-color: #00000000;" text="Logout">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </right>
+               <children>
+                  <AnchorPane layoutY="90.0" prefHeight="46.0" prefWidth="1055.0" style="-fx-background-color: #31307D;" />
+                  <AnchorPane prefHeight="90.0" prefWidth="1055.0" style="-fx-background-color: f82249;" />
+                  <AnchorPane fx:id="Transports" layoutY="136.0" prefHeight="300.0" prefWidth="300" />
+               </children>
+               <center>
+                  <Pane BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fx:id="title" layoutX="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <SplitPane dividerPositions="0.5" layoutY="29.0" orientation="VERTICAL" prefHeight="560.0" prefWidth="935.0">
+                          <items>
+                            <AnchorPane fx:id="ex2" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Text fx:id="qs2" layoutX="64.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="ans2" layoutX="534.0" layoutY="114.0" prefWidth="150.0" />
+                                    <Text layoutX="571.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réponse">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="btn5" layoutX="784.0" layoutY="219.0" mnemonicParsing="false" onAction="#getHint" text="Aidez Moi ">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Button>
+                                    <Text fx:id="hint1" layoutX="305.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane fx:id="ex1" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Text fx:id="qs1" layoutX="68.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="ans1" layoutX="533.0" layoutY="98.0" prefWidth="150.0" />
+                                    <Text layoutX="570.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réponse">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="btn5" layoutX="785.0" layoutY="217.0" mnemonicParsing="false" onAction="#getHint2" text="Aidez Moi ">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Button>
+                                    <Text fx:id="hint2" layoutX="305.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <Button fx:id="btn" layoutX="480.0" layoutY="612.0" mnemonicParsing="false" onAction="#CalculRslt" text="Avoir Ma Résultat">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn2" layoutX="699.0" layoutY="612.0" mnemonicParsing="false" onAction="#GetUserCertif" text="Avoir Ma Certification">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
